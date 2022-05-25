@@ -1,0 +1,25 @@
+CREATE TABLE genre (
+ id SERIAL PRIMARY KEY NOT NULL,
+ title VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE artist (
+ id SERIAL PRIMARY KEY NOT NULL,
+ name VARCHAR(120) NOT NULL,
+ genre_id INT REFERENCES genre(id) 
+);
+
+CREATE TABLE album (
+ id SERIAL PRIMARY KEY NOT NULL,
+ title VARCHAR(120) NOT NULL,
+ artist_id INT REFERENCES artist(id), 
+ reliased INT NOT NULL
+);
+
+CREATE TABLE track (
+ id SERIAL PRIMARY KEY NOT NULL,
+ title VARCHAR(120) NOT NULL,
+ artist_id INT REFERENCES artist(id),
+ album_id INT REFERENCES album(id),
+ duration INT NOT NULL
+);
