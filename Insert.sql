@@ -105,9 +105,9 @@ INSERT INTO public.genre (title)
 	VALUES ('Electronic');
 INSERT INTO public.genre (title)
 	VALUES ('Pop');
-	INSERT INTO public.genre (title)
+INSERT INTO public.genre (title)
 	VALUES ('Alternativ');
-	INSERT INTO public.genre (title)
+INSERT INTO public.genre (title)
 	VALUES ('Reggae');
 
 --Link Genre
