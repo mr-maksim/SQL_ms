@@ -1,11 +1,11 @@
 CREATE TABLE IF NOT EXISTS genre (
  id SERIAL PRIMARY KEY NOT NULL,
- title VARCHAR(50) NOT NULL
+ title VARCHAR(50) NOT NULL UNIQUE
 );
 
 CREATE TABLE IF NOT EXISTS artist (
  id SERIAL PRIMARY KEY NOT NULL,
- name VARCHAR(120) NOT NULL
+ name VARCHAR(120) NOT NULL UNIQUE
 );
 
 CREATE TABLE IF NOT EXISTS album (
@@ -44,5 +44,6 @@ compilation_id INT REFERENCES compilation(id),
 track_id INT REFERENCES track(id),
 CONSTRAINT CT PRIMARY KEY (compilation_id, track_id)
 );
+
 
 
